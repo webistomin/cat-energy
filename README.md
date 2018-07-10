@@ -1,5 +1,37 @@
-# cat-energy
-:cat2: Интернет-магазин для продажи кошачьего питания
+# Личный проект "Cat Energy" [![Build status][travis-image]][travis-url] [![dependencies Status](https://david-dm.org/webistomin/cat-energy/status.svg)](https://david-dm.org/webistomin/cat-energy) [![Dependency status][dependency-image]][dependency-url] 
+
+<table>
+  <thead>
+    <tr>
+      <th>Команда</th>
+      <th>Результат</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="30%"><code>npm i</code></td>
+      <td>Установить зависимости</td>
+    </tr>
+    <tr>
+      <td><code>npm start</code></td>
+      <td>Запустить сборку, сервер и слежение за файлами</td>
+    </tr>
+    <tr>
+      <td><code>npm start ЗАДАЧА</code></td>
+      <td>Запустить задачу с названием ЗАДАЧА (список задач в <code>gulpfile.js</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## _Не удаляйте и не обращайте внимание на файлы:_
+*	### `.editorconfig`
+*	### `.gitignore`
+*	### `.travis.yml`
+*	### `package.json`
+*	### `.csscomb.json`
+---
 
 ## Различные тесты
 
@@ -88,4 +120,9 @@
 * Д23. Произведена оптимизация загрузки шрифтов.
 ### Разное
 * Д15. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в техническом задании или styleguide.psd).
+
+[travis-image]: https://travis-ci.org/webistomin/cat-energy.svg?branch=master
+[travis-url]: https://travis-ci.org/webistomin/cat-energy
+[dependency-image]: https://david-dm.org/webistomin/cat-energy/dev-status.svg
+[dependency-url]: https://david-dm.org/webistomin/cat-energy
 
