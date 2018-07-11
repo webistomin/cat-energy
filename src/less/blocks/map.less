@@ -32,4 +32,41 @@
     border: none;
     vertical-align: top;
   }
+
+  @media @screen-sm {
+
+    &__info {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    &__title {
+      width: min-content;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__text {
+      width: 160px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #yandex-map {
+      min-height: 396px;
+
+      & iframe {
+        min-height: 396px;
+      }
+    }
+  }
 }

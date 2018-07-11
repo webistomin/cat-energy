@@ -59,6 +59,8 @@
   }
 
   @media @screen-sm {
+    border-bottom: 1px solid #e6e6e6;
+
     &__list {
       display: flex;
       justify-content: space-between;
@@ -77,6 +79,11 @@
       padding-top: 118px;
       counter-increment: my-awesome-counter;
       margin-bottom: 140px;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: 100px;
+      }
 
       &::before {
         width: 80px;
