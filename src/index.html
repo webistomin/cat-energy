@@ -104,18 +104,18 @@
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="example__results">
             <fieldset class="example__result">
-              <legend class="example__legend">снижение веса</legend>
+              <legend class="example__legend">снижение <br> веса</legend>
               <span class="example__value">5 кг</span>
             </fieldset>
             <fieldset class="example__result">
-              <legend class="example__legend">затрачено время</legend>
+              <legend class="example__legend">затрачено <br> время</legend>
               <span class="example__value">60 дней</span>
             </fieldset>
             <p class="example__desc">Затраты на питание: <span class="example__price">15000</span></p>
           </div>
         </div>
         <div class="example__column">
-          <div class="example__compare">
+          <div class="example__compare js-comparison-container">
             <figure class="example__before">
               <picture>
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
@@ -123,7 +123,7 @@
                 <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                 <source media="(min-width: 1140px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="До" class="example__img">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="До" class="example__img comparison-image">
               </picture>
             </figure>
             <figure class="example__after">
@@ -133,18 +133,18 @@
                 <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                 <source media="(min-width: 1140px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="До" class="example__img">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="До" class="example__img comparison-image">
               </picture>
             </figure>
           </div>
           <div class="example__range">
             <button class="example__btn" type="button">
-              <span class="example__desc">Было</span>
+              <span class="example__desc example__desc--pl">Было</span>
             </button>
             <span class="example__track"></span>
             <span class="example__thumb"></span>
             <button class="example__btn" type="button">
-              <span class="example__desc">Стало</span>
+              <span class="example__desc example__desc--pr">Стало</span>
             </button>
           </div>
         </div>
@@ -154,16 +154,16 @@
 </main>
 <footer class="page-footer">
   <section class="map">
-    <div class="map__info">
-      <h3 class="map__title title">Приглашаем к сотрудничеству дилеров!</h3>
-      <div class="map__address">
-        <p class="map__text">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="map__text">Санкт-Петербург</p>
+    <div class="container">
+      <div class="map__info">
+        <h3 class="map__title title">Приглашаем к сотрудничеству <br> дилеров!</h3>
+        <div class="map__address">
+          <p class="map__text">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="map__text">Санкт-Петербург</p>
+        </div>
       </div>
-
-      <!--map from google-->
-
     </div>
+    <div id="google-map"></div>
   </section>
   <div class="page-footer__inner">
     <a href="#" class="page-footer__link">
@@ -181,5 +181,29 @@
 </footer>
 
 <script src="js/script.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEtp6k9TdryARFA631p-VE3kE1sBie25E&callback=initMap" type="text/javascript"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', domReady);
+
+  function domReady() {
+    var imageComparisonCollection = document.querySelectorAll('.js-comparison-container');
+    for (var i = 0; i < imageComparisonCollection.length; i++) {
+      var imageWidget = imageComparisonCollection[i];
+      var images = imageWidget.querySelectorAll('.comparison-image');
+      new ImageComparison({
+        container: imageWidget,
+        startPosition: imageWidget.getAttribute('start-position'),
+        data: [
+          {
+            image: images[0],
+          },
+          {
+            image: images[1],
+          }
+        ],
+      });
+    }
+  }
+</script>
 </body>
 </html>
