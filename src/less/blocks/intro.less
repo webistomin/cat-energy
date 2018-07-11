@@ -25,9 +25,50 @@
     width: 280px;
   }
 
+  &__break {
+    display: none;
+  }
+
   @media @screen-xs {
     &__btn {
       margin-top: 100px;
+    }
+  }
+
+  @media @screen-sm {
+    padding-left: 90px;
+    position: relative;
+    align-items: flex-start;
+    padding-bottom: 550px;
+
+    &__title {
+      margin-top: 50px;
+      margin-bottom: 40px;
+      color: @color-text--black;
+      text-align: left;
+    }
+
+    &__break {
+      display: block;
+    }
+
+    &__desc {
+      font-size: 20px;
+      line-height: 20px;
+      color: @color-text--black;
+      margin-bottom: 0;
+    }
+
+    &__pic {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__btn {
+      margin-top: 40px;
+      width: 245px;
     }
   }
 }
