@@ -1,0 +1,46 @@
+.main-nav {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  &--closed {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--opened {
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__item {
+    border-top: 1px solid #e6e6e6;
+
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+
+
+  &__link {
+    display: block;
+    box-sizing: border-box;
+    font-family: Oswald, Arial, sans-serif;
+    font-weight: 500;
+    color: @color-text--black;
+    background-color: @color-text--white;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 23px 0;
+    text-transform: uppercase;
+  }
+}

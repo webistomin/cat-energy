@@ -1,0 +1,47 @@
+.page-header {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 65px;
+  background-size: contain;
+
+  &__logo {
+    margin: 0;
+  }
+
+  &__inner {
+    position: relative;
+    padding-top: 11px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__toggle {
+    box-sizing: border-box;
+    height: 18px;
+    width: 24px;
+    position: relative;
+
+    & span {
+      position: absolute;
+      display: block;
+      width: inherit;
+      height: 2px;
+      background-color: #222222;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 8px;
+      }
+
+      &:last-child {
+        top: 16px;
+      }
+    }
+  }
+
+}
