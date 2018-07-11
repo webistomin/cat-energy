@@ -6,6 +6,14 @@
 
   &__logo {
     margin: 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   &__inner {
@@ -29,6 +37,8 @@
       width: inherit;
       height: 2px;
       background-color: #222222;
+      transition: all 0.2s ease-in-out;
+
 
       &:first-child {
         top: 0;
@@ -40,6 +50,29 @@
 
       &:last-child {
         top: 16px;
+      }
+    }
+
+    &--opened {
+      & span {
+        &:first-child {
+          transform: rotate(45deg);
+          top: 8px;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transition: all 0.2s ease-in-out;
+
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 8px;
+          transition: all 0.2s ease-in-out;
+
+        }
       }
     }
   }
