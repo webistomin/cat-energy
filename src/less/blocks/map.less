@@ -69,4 +69,26 @@
       }
     }
   }
+
+  @media @screen-md {
+    position: relative;
+
+    &__info {
+      box-sizing: border-box;
+      position: absolute;
+      top: 95px;
+      left: 110px;
+      width: 570px;
+      min-height: 200px;
+      background-color: @color-text--white;
+    }
+
+    #yandex-map {
+      min-height: 400px;
+
+      & iframe {
+        min-height: 400px;
+      }
+    }
+  }
 }
