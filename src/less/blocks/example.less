@@ -196,4 +196,70 @@
       text-align: right;
     }
   }
+
+  @media @screen-md {
+    &__inner {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+
+    &__price {
+      display: initial;
+    }
+
+    &__desc {
+      margin-left: initial;
+      margin-top: 58px;
+      margin-bottom: 0;
+
+      &--pl,
+      &--pr {
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          border-bottom: 1px dotted #bebebe;
+          width: 100%;
+          height: 1px;
+        }
+      }
+
+      &--pl {
+        margin-left: 69px;
+      }
+
+      &--pr {
+        margin-right: 69px;
+      }
+    }
+
+    &__legend {
+      background-color: @color-grey;
+    }
+
+    &__column {
+      width: initial;
+      flex-shrink: initial;
+      justify-content: flex-end;
+
+      &--width {
+        width: 450px;
+      }
+
+      &--margin {
+        margin-top: -82px;
+        width: 610px;
+      }
+    }
+  }
 }

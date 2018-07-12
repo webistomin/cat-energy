@@ -123,6 +123,9 @@ button {
   border: 1px solid #cdcdcd;
   border-radius: 27px;
 
+  @media @screen-md {
+    width: 10px;
+  }
 }
 .comparison-control {
   width: 12px;
@@ -134,6 +137,12 @@ button {
   left: 50%;
   background: @color-green;
   border-radius: 100%;
+
+  @media @screen-md {
+    width: 18px;
+    height: 18px;
+    left: 20%;
+  }
 }
 .comparison-control:before,
 .comparison-control:after {
