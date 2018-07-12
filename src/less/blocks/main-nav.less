@@ -96,4 +96,22 @@
       }
     }
   }
+
+  @media @screen-md {
+
+    &__item {
+      margin-right: 38px;
+    }
+
+    &__link {
+      background-color: transparent;
+      color: @color-text--white;
+
+      &--active {
+        &::before {
+          background-color: @color-text--white;
+        }
+      }
+    }
+  }
 }
