@@ -35,6 +35,7 @@
 
 ## Различные тесты
 <img src="mockup/lighthouse.png">
+<img src="mockup/google.png">
 
 ## Превью сайта
 <img src="mockup/mockup.png">
