@@ -68,7 +68,7 @@ To emphasise this I use inline style="display: none" -->
       <p class="form__text">Заполните анкету и мы подберем
         программу питания для вашего кота</p>
       <form action="" class="form__field">
-        <div class="form__inner">
+        <div class="form__inner form__inner--flex">
           <div class="form__column">
             <div class="form__inputs">
               <label for="name" class="form__label">Имя:*</label>
@@ -100,13 +100,15 @@ To emphasise this I use inline style="display: none" -->
         </div>
         <div class="form__inner form__inner--line">
           <h2 class="form__title form__title--small title">Контактные данные (владельца кота)</h2>
-          <div class="form__inputs">
-            <label for="email" class="form__label">E-mail:*</label>
-            <input type="email" class="form__input" placeholder="KUKLACHEV@GMAIL.COM" id="email">
-          </div>
-          <div class="form__inputs">
-            <label for="phone" class="form__label">Телефон:*</label>
-            <input type="tel" class="form__input" placeholder="8(960)900-60-90" id="phone">
+          <div class="form__wrapper">
+            <div class="form__inputs form__inputs--flex">
+              <label for="email" class="form__label">E-mail:*</label>
+              <input type="email" class="form__input" placeholder="KUKLACHEV@GMAIL.COM" id="email">
+            </div>
+            <div class="form__inputs form__inputs--flex">
+              <label for="phone" class="form__label">Телефон:*</label>
+              <input type="tel" class="form__input" placeholder="8(960)900-60-90" id="phone">
+            </div>
           </div>
         </div>
         <div class="form__inner form__inner--line">
