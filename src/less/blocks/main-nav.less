@@ -121,6 +121,25 @@
           background-color: @color-text--white;
         }
       }
+
+      &--black {
+        color: @color-text--black;
+        background-color: @color-text--white;
+
+        &:hover {
+          color: rgba(17, 17, 17, 0.6);
+        }
+
+        &:active {
+          color: rgba(17, 17, 17, 0.3);
+        }
+
+
+          &::before {
+            background-color: @color-green;
+          }
+
+      }
     }
   }
 }
