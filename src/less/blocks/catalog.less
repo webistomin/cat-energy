@@ -21,6 +21,8 @@
 
     &--width {
       width: auto;
+      margin-bottom: 6px;
+      margin-top: 74px;
     }
   }
 
@@ -53,13 +55,37 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-top: none;
+      border-bottom: 1px solid #e6e6e6;
+
+      &::before,
+      &::after {
+        width: 30px;
+        height: 2px;
+        content: "";
+        position: absolute;
+        background-color: #d3d3d3;
+        left: 145px;
+        top: 40px;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
     }
   }
 
   &__btn {
     margin-top: 5px;
     width: 100%;
+
+    &--grey {
+      color: @color-text--grey;
+      background-color: @color-grey;
+
+      &:hover {
+        color: @color-text--white;
+      }
+    }
   }
 
   &__desc,
@@ -76,5 +102,13 @@
 
   &__table {
     width: 100%;
+  }
+
+  &__text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: @color-text--grey;
+    margin-bottom: 20px;
   }
 }
