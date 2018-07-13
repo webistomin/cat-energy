@@ -377,6 +377,11 @@ button {
   background-position: 100% 65px;
   background-size: contain;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .page-header {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+}
 .page-header--nobg {
   background-image: none;
 }
@@ -467,6 +472,12 @@ button {
   }
   .page-header--nobg {
     background-image: none;
+  }
+}
+@media (min-width: 1180px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1180px) and (min-resolution: 192dpi) {
+  .page-header {
+    background-image: url("../img/index-background-desktop@2x.jpg");
+    background-size: 720px 696px;
   }
 }
 .main-nav {
@@ -948,14 +959,38 @@ button {
 .features__item:first-child::before {
   background-image: url("../img/advantage-leaf@1x.png");
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .features__item:first-child::before {
+    background-image: url("../img/advantage-leaf@2x.png");
+    background-size: 50px 50px;
+  }
+}
 .features__item:nth-child(2)::before {
   background-image: url("../img/advantage-powder@1x.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .features__item:nth-child(2)::before {
+    background-image: url("../img/advantage-powder@2x.png");
+    background-size: 50px 50px;
+  }
 }
 .features__item:nth-child(3)::before {
   background-image: url("../img/advantage-dining@1x.png");
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .features__item:nth-child(3)::before {
+    background-image: url("../img/advantage-dining@2x.png");
+    background-size: 50px 50px;
+  }
+}
 .features__item:last-child::before {
   background-image: url("../img/advantage-clock@1x.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .features__item:last-child::before {
+    background-image: url("../img/advantage-clock@2x.png");
+    background-size: 50px 50px;
+  }
 }
 .features__text {
   font-family: Arial, sans-serif;
@@ -1289,13 +1324,21 @@ button {
   color: #444444;
 }
 .map #yandex-map {
-  min-height: 360px;
+  height: 360px;
   background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
   background-position: center center;
   background-repeat: no-repeat;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .map #yandex-map {
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 124px 106px,320px 400px;
+  }
+}
 .map #yandex-map iframe {
-  min-height: 360px;
+  height: 360px;
   border: none;
   vertical-align: top;
 }
@@ -1329,11 +1372,19 @@ button {
             justify-content: space-between;
   }
   .map #yandex-map {
-    min-height: 396px;
+    height: 396px;
     background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
   }
   .map #yandex-map iframe {
-    min-height: 396px;
+    height: 396px;
+  }
+}
+@media (min-width : 660px) and (-webkit-min-device-pixel-ratio: 2), (min-width : 660px) and (min-resolution: 192dpi) {
+  .map #yandex-map {
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 124px 106px,767px 400px;
   }
 }
 @media (min-width: 1180px) {
@@ -1354,7 +1405,15 @@ button {
     min-height: 400px;
   }
   .map #yandex-map iframe {
-    min-height: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 1180px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1180px) and (min-resolution: 192dpi) {
+  .map #yandex-map {
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@2x.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 124px 106px, 1440px 400px;
   }
 }
 .page-footer__inner {
@@ -1742,6 +1801,12 @@ button {
   background-color: #68b738;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .additional__link {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px 289px;
+  }
+}
 .additional__link::before {
   width: 56px;
   height: 60px;
@@ -1824,6 +1889,12 @@ button {
     text-align: left;
   }
 }
+@media (min-width : 660px) and (-webkit-min-device-pixel-ratio: 2), (min-width : 660px) and (min-resolution: 192dpi) {
+  .additional__link {
+    background-image: url("../img/gift-photo-tablet@2x.jpg");
+    background-size: 708px 200px;
+  }
+}
 @media (min-width: 1180px) {
   .additional {
     padding-bottom: 87px;
@@ -1893,6 +1964,12 @@ button {
   }
   .additional__name {
     margin-right: auto;
+  }
+}
+@media (min-width: 1180px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1180px) and (min-resolution: 192dpi) {
+  .additional__link {
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
+    background-size: 245px 289px;
   }
 }
 .form {
