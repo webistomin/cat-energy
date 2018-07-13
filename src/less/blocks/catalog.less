@@ -121,7 +121,7 @@
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     &__item {
@@ -211,6 +211,24 @@
 
     &__text {
       text-align: center;
+    }
+  }
+
+  @media @screen-md {
+    &__item {
+      max-width: 245px;
+    }
+
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__title {
+      text-align: left;
+
+      &--small {
+        text-align: center;
+      }
     }
   }
 }

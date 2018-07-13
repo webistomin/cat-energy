@@ -150,4 +150,83 @@
       text-align: left;
     }
   }
+
+  @media @screen-md {
+    padding-bottom: 87px;
+
+    &::before {
+      top: 23px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__column {
+      &:first-child {
+        width: 895px;
+        margin-right: 80px;
+      }
+    }
+
+    &__link {
+      margin-top: 0;
+      min-height: 290px;
+      width: 245px;
+      background-image: url("../img/gift-photo-desktop@1x.jpg");
+      align-items: center;
+      justify-content: flex-end;
+
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__text {
+      padding: 0;
+      padding-bottom: 42px;
+      text-align: center;
+    }
+
+    &__btn {
+      width: 245px;
+      margin-top: 0;
+    }
+
+    &__item {
+      align-items: baseline;
+      justify-content: space-between;
+      padding-left: 0;
+      border-left: none;
+      padding-right: 0;
+      border-right: none;
+      padding-top: 16px;
+      padding-bottom: 15px;
+      flex-wrap: nowrap;
+    }
+
+    &__inner {
+      margin-left: initial;
+      max-width: 285px;
+      width: 36%;
+      margin-right: 40px;
+    }
+
+    &__quantity {
+      margin: 0;
+    }
+
+    &__name {
+      margin-right: auto;
+    }
+
+
+  }
 }
