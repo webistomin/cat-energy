@@ -26,14 +26,23 @@
   }
 
   #yandex-map {
-    min-height: 360px;
+    height: 360px;
     background-image:  url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
     background-position: center center;
     background-repeat: no-repeat;
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image:  url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 124px 106px,320px 400px;
+    }
   }
 
   #yandex-map iframe {
-    min-height: 360px;
+    height: 360px;
     border: none;
     vertical-align: top;
   }
@@ -67,11 +76,20 @@
     }
 
     #yandex-map {
-      min-height: 396px;
+      height: 396px;
       background-image:  url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
 
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        background-image:  url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 124px 106px,767px 400px;
+      }
+
       & iframe {
-        min-height: 396px;
+        height: 396px;
       }
     }
   }
@@ -93,8 +111,17 @@
       background-image:  url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
       min-height: 400px;
 
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        background-image:  url("../img/map-pin.png"), url("../img/bg-map-desktop@2x.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 124px 106px, 1440px 400px;
+      }
+
       & iframe {
-        min-height: 400px;
+        height: 400px;
       }
     }
   }
