@@ -5,7 +5,7 @@
   font-style: normal;
   font-stretch: normal;
   font-display: swap;
-  unicode-range: u -2054;
+  unicode-range: u+0020-2074;
 }
 @font-face {
   font-family: "Oswald Medium";
@@ -14,7 +14,7 @@
   font-style: normal;
   font-stretch: normal;
   font-display: swap;
-  unicode-range: u -2054;
+  unicode-range: u+0020-2074;
 }
 .container {
   width: 87.5%;
@@ -2026,6 +2026,12 @@ button {
   margin-right: 15px;
   flex-shrink: 0;
 }
+.form__label:hover::before {
+  border-color: #c6c6c6;
+}
+.form__label:active {
+  opacity: 0.3;
+}
 .form__label--radio {
   margin-right: 0;
   padding-left: 46px;
@@ -2105,6 +2111,15 @@ input:checked ~ .form__label--checkbox::after {
   line-height: 18px;
   text-transform: uppercase;
   border: 1px solid #e6e6e6;
+}
+.form__input:hover {
+  border-color: #cdcdcd;
+}
+.form__input:active {
+  border-color: #f2f2f2;
+}
+.form__input:invalid {
+  border-color: #ff8282;
 }
 .form input[type='radio'],
 .form input[type='checkbox'] {
